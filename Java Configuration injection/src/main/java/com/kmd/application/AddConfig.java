@@ -14,7 +14,7 @@ public class AddConfig {
 	@Scope("prototype")
 	@Bean(name = "customerService")
 	public CustomerService getCustomerService() {
-		CustomerService service = new CustomerServiceImpl(getCustomerRepository());
+		CustomerService service = new CustomerServiceImpl(new CustomerRepositoryImpl2());
 //		CustomerServiceImpl service=new CustomerServiceImpl();
 		// service.setCustomerRepo(new CustomerRepositoryImpl2());
 		return service;
